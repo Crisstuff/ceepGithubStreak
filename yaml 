@@ -1,0 +1,21 @@
+name: Example Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Use PAT from GitHub Secrets
+        env:
+          GITHUB_PAT: ${{ secrets.MY_PAT }}
+        run: |
+          echo "Using PAT in a script"
+          curl -H "Authorization: token $GITHUB_PAT" https://api.github.com/user
