@@ -1,6 +1,6 @@
 # Ceep Github streak
 
-This is a program that im running on a [raspberry pi](https://www.raspberrypi.com/products/raspberry-pi-5/) 5 to Ceep my github streak. It is a program that commit's a massage into this readMe file once every day its running.
+This is a program that im running on a [raspberry pi](https://www.raspberrypi.com/) 5 to Ceep my github streak. It is a program that commit's a massage into this readMe file once every day its running.
 
 ### Tools: 
 - crontab -e
@@ -17,4 +17,5 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 
 # Version for Window OS
 - Working progress
+
 
