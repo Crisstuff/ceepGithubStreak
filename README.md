@@ -19,3 +19,6 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 - Working progress
 
 
+# Times this ceepGithubStreak have run:
+<b> Total count: </b>
+
