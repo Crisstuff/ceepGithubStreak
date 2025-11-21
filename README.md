@@ -6,12 +6,26 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 - crontab -e
 - bash
 
+### How it works
+- This project uses crontab to set a rimainder to run this script once every day
+- The `script.sh` file contains a bash script that opens the `README.md` file and types a massage to <b> Ceep Github streak </b> 🎉
+- The script also count's the Total conunt and + 1 for each time it runs 
+
+
+
 
 # Version for Linux & Mac OS
 ## How to set this up on a raspberry pi 5
 
 ## How to sett this up in general
 1. Clone this repositorry
+2. Open the project and type this in the terminal vindow `pwd` | This will show the file path to your project `copy the file path`
+3. Now type this in the terminal window `crontab -e` | Navigate to the part where it says `sdakfndjsa`
+4. Then type in `00 00 * * *` & `your file path`
+   
+   After you have done this it should look something like this | `00 00 * * * /path/to/your/script.sh`
+
+5. Now you`ll just have to have your machene run constantly and the scipt will run 00:00 every day 👍
 
 
 
@@ -20,5 +34,8 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 
 
 # Times this ceepGithubStreak have run:
-<b> Total count: </b>
+<b> Total count: 12 </b>
+
+This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, 
+
 
