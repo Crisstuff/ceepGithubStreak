@@ -9,7 +9,7 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 ### How it works
 - This project uses crontab to set a rimainder to run this script once every day
 - The `script.sh` file contains a bash script that opens the `README.md` file and types a massage to <b> Ceep Github streak </b> 🎉
-- The script also count's the Total conunt and + 1 for each time it runs 
+- The script also count's the Total count and + 1 for each time it runs 
 
 
 
@@ -37,5 +37,6 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 <b> Total count: 12 </b>
 
 This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, 
+
 
 
