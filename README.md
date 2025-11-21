@@ -28,7 +28,7 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
    
    After you have done this it should look something like this | `00 00 * * * /path/to/your/script.sh`
 
-5. Now you`ll just have to have your machene run constantly and the scipt will run 00:00 every day 👍
+5. Now you`ll just have to have your machene run constantly and the script will run 00:00 every day 👍
 
 ## How to set this up on a raspberry pi 5
 
@@ -45,6 +45,7 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 
 
 This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, 
+
 
 
 
