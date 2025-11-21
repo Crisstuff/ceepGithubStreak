@@ -1,9 +1,14 @@
-pip install PyGithub
-python daily_commit.py
-crontab -e
-0 12 * * * /usr/bin/python3 /path/to/daily_commit.py
+#!/bin/sh
 
-# To ting jeg kan gjøre for og legge til Pat på en trygg måte: 
-# jeg kan legge den inn i en fil på PCen så den ikke er i scriptet så kan jeg kalle på den derifra
-# Jeg kan (Add the PAT as a GitHub Secret) eksempel er brukt i yaml filen her
+# File name
+README="README.md"
+
+# The line to match
+MATCH="<b> Total count: </b>"
+
+# The text you want to insert below it
+MESSAGE="This is a message"
+
+# Use sed to insert the message *after* the matching line
+sed -i "/$MATCH/a $MESSAGE" "$README"
 
