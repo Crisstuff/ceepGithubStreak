@@ -1,14 +1,14 @@
 #!/bin/sh
 
 README="README.md"
-MESSAGE="This is a massage, "
+MESSAGE="This is a message, "
 TODAY=$(date +"%d.%m.%Y")
 YESTERDAY=$(date -v-1d +"%d.%m.%Y" 2>/dev/null || date -d "yesterday" +"%d.%m.%Y")
 
 # Extract fields from README
 highest=$(grep "<b> Highest held streak:" "$README" | sed 's/[^0-9]*//g')
 last_updated=$(grep "<b> Last updated:" "$README" | sed 's/.*: //g' | sed 's/<.*//')
-total=$(grep -o "This is a massage" "$README" | wc -l | tr -d ' ')
+total=$(grep -o "This is a message, " "$README" | wc -l | tr -d ' ')
 
 # ---- DAILY RESET CHECK ----
 if [ "$last_updated" != "$TODAY" ] && [ "$last_updated" != "$YESTERDAY" ]; then
