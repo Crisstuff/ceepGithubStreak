@@ -24,9 +24,17 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 
 ## How to sett this up in general linux/mac PC
 1. Clone this repositorry
-2. Open the `README.md` move to the bottom of the file and
-
+2. Open the `README.md` scroll to the bottom of the file and change the information under `Times this ceepGithubStreak have run`
    
+   | From this | To this |
+   | :------- | :------- |
+   | Highest held streak: 1 days | Highest held streak: X days  | 
+   | Last updated: 23.11.2025 |  Last updated: DD.MM.YYYY |
+   | Total count now: 1 |  Total count now: X  |
+   
+   And delate all the `This is a message` comments under the `List of prints`.
+
+   This resets the the README.md to production.
     
 4. In the terminal type `chmod +x macScript.sh` & klikk `enter` | This will make the script runeble.
 5. Open the project and type this in the terminal vindow `pwd` | This will show the file path to your project `copy the file path`.
@@ -60,5 +68,6 @@ This part of the README will be where the commits are happening. The list under 
 <b> List of prints: </b>
 
 This is a massage, 
+
 
 
