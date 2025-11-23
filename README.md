@@ -13,9 +13,11 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 
 </br>
 
-- See the longest held streak 
-- Add the last time in the `Last updated` to see the last date it was updated
-- Total count now is the amount of times the massage has been written to now  
+### Conditions to the script: 
+- See the `Highest held streak`: If the streak is higher than the `Highest held streak` the `Total count now` amount becomes the new  `Highest held streak` amount.
+- Add the last time the streak was updated in the `Last updated` to see the last date it was updated.
+- Show the `Total count now` of the streak by counting the massages under the `List of prints`. 
+- If the `Last updated` date isnt from the day erlyer the `List of prints` gets viped and the `Total count now` gets set back to 0.
 
 
 # Version for Linux & Mac OS
@@ -37,18 +39,11 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 
 
 # Times this ceepGithubStreak have run:
-<b> Highest held streak: 100 days </b>
+<b> Highest held streak: 1 days </b>
 
-<b> Last updated: 00:00 21.11.2025 </b>
+<b> Last updated: 23.11.2025 </b>
 
-<b> Total count now: 12 </b>
+<b> Total count now: 1 </b>
 
 <b> List of prints: </b>
-This is a massage, 
-This is a massage, 
-This is a massage, 
-This is a massage, 
-This is a massage, 
-This is a massage, 
-This is a massage, 
 This is a massage, 
