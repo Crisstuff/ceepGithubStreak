@@ -24,16 +24,20 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 
 ## How to sett this up in general linux/mac PC
 1. Clone this repositorry
-2. In terminal type `chmod +x macScript.sh` & klikk `enter` | This will make the script runeble
-3. Open the project and type this in the terminal vindow `pwd` | This will show the file path to your project `copy the file path`
-4. Type this in the terminal window `crontab -e` | To write `shift I` this means Insert
-5. Type in `00 00 * * *` & `your file path` & `macScript.sh` | remember that  
+2. Open the `README.md` move to the bottom of the file and
+
    
-   After you have done this it should look something like this | `00 00 * * * /path/to/your/macScript.sh`
+    
+4. In the terminal type `chmod +x macScript.sh` & klikk `enter` | This will make the script runeble.
+5. Open the project and type this in the terminal vindow `pwd` | This will show the file path to your project `copy the file path`.
+6. Type this in the terminal window `crontab -e` | To write `shift I` this means Insert.
+7. Type in `00 00 * * *` & `your file path` & `macScript.sh` | remember that.
+   
+   After you have done this it should look something like this | `00 00 * * * /path/to/your/macScript.sh`.
    
    Then klikk `esc` to get out of Insert mode, Then write `:wq` this means write quit and saves your changes.
 
-6. Now you`ll just have to have your machene run constantly and the script will run 00:00 every day 👍
+8. Now you`ll just have to have your machene run constantly and the script will run 00:00 every day 👍
 
 ## How to set this up on a raspberry pi 5
 - Work in progress 
@@ -42,7 +46,11 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 - Work in progress
 
 
+
 # Times this ceepGithubStreak have run:
+
+This part of the README will be where the commits are happening. The list under will be updated every day the script is running under `List of prints` you will see all the massages that has been commited in your current streak. NOTE: The info for to update each day is beaing calculated using the date in `Last updated`. I recomend to not try to edit any of the information under so that you dont messup the streak.
+
 <b> Highest held streak: 1 days </b>
 
 <b> Last updated: 23.11.2025 </b>
@@ -52,4 +60,5 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 <b> List of prints: </b>
 
 This is a massage, 
+
 
