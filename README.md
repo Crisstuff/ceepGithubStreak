@@ -24,20 +24,22 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 
 ## How to sett this up in general linux/mac PC
 1. Clone this repositorry
-2. Open the project and type this in the terminal vindow `pwd` | This will show the file path to your project `copy the file path`
-3. Now type this in the terminal window `crontab -e` | To write `shift I` this means Insert
-4. Then type in `00 00 * * *` & `your file path` & `macScript.sh` | remember that  
+2. In terminal type `chmod +x macScript.sh` & klikk `enter` | This will make the script runeble
+3. Open the project and type this in the terminal vindow `pwd` | This will show the file path to your project `copy the file path`
+4. Type this in the terminal window `crontab -e` | To write `shift I` this means Insert
+5. Type in `00 00 * * *` & `your file path` & `macScript.sh` | remember that  
    
-   After you have done this it should look something like this | `00 00 * * * /path/to/your/script.sh`
+   After you have done this it should look something like this | `00 00 * * * /path/to/your/macScript.sh`
    
    Then klikk `esc` to get out of Insert mode, Then write `:wq` this means write quit and saves your changes.
 
 6. Now you`ll just have to have your machene run constantly and the script will run 00:00 every day 👍
 
 ## How to set this up on a raspberry pi 5
+- Work in progress 
 
 # Version for Window OS
-- Working progress
+- Work in progress
 
 
 # Times this ceepGithubStreak have run:
@@ -50,3 +52,4 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 <b> List of prints: </b>
 
 This is a massage, 
+
