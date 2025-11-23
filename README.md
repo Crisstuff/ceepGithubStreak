@@ -39,15 +39,16 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 # Times this ceepGithubStreak have run:
 <b> Highest held streak: 100 days </b>
 
-<b> Total count now: 12 </b>
-
 <b> Last updated: 00:00 21.11.2025 </b>
 
+<b> Total count now: 12 </b>
 
-This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, This is a massage, 
-
-
-
-
-
-
+<b> List of prints: </b>
+This is a massage, 
+This is a massage, 
+This is a massage, 
+This is a massage, 
+This is a massage, 
+This is a massage, 
+This is a massage, 
+This is a massage, 

@@ -1,10 +1,13 @@
 #!/bin/sh
 
 README="README.md"
-MATCH="<b> Total count: </b>"
-MESSAGE="This is a message"
+MESSAGE="This is a massage, "
 
-# macOS/BSD sed syntax for appending a line
-sed -i '' "/$MATCH/a\\
-$MESSAGE
-" "$README"
+awk -v msg="$MESSAGE" '
+{
+    print $0
+    if ($0 ~ /<b> List of prints:/) {
+        print msg
+    }
+}
+' "$README" > tmpfile && mv tmpfile "$README"
