@@ -36,12 +36,12 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 
    This resets the the README.md to production.
     
-4. In the terminal type `chmod +x macScript.sh` & klikk `enter` | This will make the script runeble.
+4. In the terminal type `chmod +x script.sh` & klikk `enter` | This will make the script runeble.
 5. Open the project and type this in the terminal vindow `pwd` | This will show the file path to your project `copy the file path`.
 6. Type this in the terminal window `crontab -e` | To write `shift I` this means Insert.
-7. Type in `00 00 * * *` & `your file path` & `macScript.sh` | remember that.
+7. Type in `00 00 * * *` & `your file path` & `script.sh` | remember that.
    
-   After you have done this it should look something like this | `00 00 * * * /path/to/your/macScript.sh`.
+   After you have done this it should look something like this | `00 00 * * * /path/to/your/script.sh`.
    
    Then klikk `esc` to get out of Insert mode, Then write `:wq` this means write quit and saves your changes.
 
