@@ -30,7 +30,7 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
    | :------- | :------- |
    | Highest held streak: 1 days | Highest held streak: X days  | 
    | Last updated: 23.11.2025 |  Last updated: DD.MM.YYYY |
-   | Total count now: 1 |  Total count now: X  |
+   | Total count now: 1 |  Total count now: 0  |
    
    And delate all the `This is a message` comments under the `List of prints`.
 
@@ -41,7 +41,7 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 6. Type this in the terminal window `crontab -e` | To write `shift I` this means Insert.
 7. Type in `00 00 * * *` & `your file path` & `script.sh` | remember that.
    
-   After you have done this it should look something like this | `00 00 * * * /path/to/your/script.sh`.
+   After you have done this it should look something like this | `00 00 * * * cd /path/to/your/repo && ./script.sh`.
    
    Then klikk `esc` to get out of Insert mode, Then write `:wq` this means write quit and saves your changes.
 
@@ -68,6 +68,7 @@ This part of the README will be where the commits are happening. The list under 
 <b> List of prints: </b>
 
 This is a massage, 
+
 
 
 
