@@ -59,10 +59,10 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 
 This part of the README will be where the commits are happening. The list under will be updated every day the script is running under `List of prints` you will see all the massages that has been commited in your current streak. NOTE: The info for to update each day is beaing calculated using the date in `Last updated`. I recomend to not try to edit any of the information under so that you dont messup the streak.
 
-<b> Highest held streak: X days </b>
+<b> Highest held streak:  days </b>
 
-<b> Last updated: DD.MM.YYYY </b>
+<b> Last updated: 24.11.2025 </b>
 
-<b> Total count now: 0 </b>
+<b> Total count now: 1 </b>
 
 <b> List of prints: </b>
