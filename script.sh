@@ -2,7 +2,7 @@
 # macOS + Linux compatible
 
 README="README.md"
-MESSAGE="This is a massage"
+MESSAGE="This is a massage, "
 TODAY=$(date +"%d.%m.%Y") # Get today's date
 
 # Get yesterday's date 
@@ -15,7 +15,7 @@ fi
 # Extract fields from README
 highest=$(grep "<b> Highest held streak:" "$README" | sed 's/[^0-9]*//g')
 last_updated=$(grep "<b> Last updated:" "$README" | sed 's/.*: //g' | sed 's/<.*//')
-total=$(grep -o "This is a massage" "$README" | wc -l | tr -d ' ')
+total=$(grep -o "This is a massage, " "$README" | wc -l | tr -d ' ')
 
 # Daily reset check
 if [ "$last_updated" != "$TODAY" ] && [ "$last_updated" != "$YESTERDAY" ]; then
