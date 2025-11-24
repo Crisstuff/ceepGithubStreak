@@ -23,7 +23,7 @@ if [ "$last_updated" != "$TODAY" ] && [ "$last_updated" != "$YESTERDAY" ]; then
 
     # Wipe list after "List of prints:"
     awk '
-    /^List of prints:/ { print; skip=1; next }
+    /<b> List of prints:/ { print; skip=1; next }
     skip && NF==0 { skip=0; next } 
     !skip
     ' "$README" > tmp && mv tmp "$README"
@@ -36,7 +36,7 @@ total=$((total + 1))
 awk -v msg="$MESSAGE" '
 {
     print $0
-    if ($0 ~ /^List of prints:/) {
+    if ($0 ~ /<b> List of prints:/) {
         inlist=1
         next
     }
