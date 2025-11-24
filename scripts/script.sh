@@ -10,7 +10,7 @@ highest=$(grep "<b> Highest held streak:" "$README" | sed 's/[^0-9]*//g')
 last_updated=$(grep "<b> Last updated:" "$README" | sed 's/.*: //g' | sed 's/<.*//')
 total=$(grep -o "This is a message, " "$README" | wc -l | tr -d ' ')
 
-# ---- DAILY RESET CHECK ----
+# Daily reset check
 if [ "$last_updated" != "$TODAY" ] && [ "$last_updated" != "$YESTERDAY" ]; then
     total=0
     # Remove list of prints section entirely
@@ -20,7 +20,7 @@ if [ "$last_updated" != "$TODAY" ] && [ "$last_updated" != "$YESTERDAY" ]; then
     !p' "$README" > tmp && mv tmp "$README"
 fi
 
-# ---- ADD NEW MESSAGE ----
+# Add new message
 total=$((total + 1))
 
 # Insert message under "List of prints"
@@ -33,12 +33,12 @@ awk -v msg="$MESSAGE" '
 }
 ' "$README" > tmp && mv tmp "$README"
 
-# ---- UPDATE HIGHEST STREAK ----
+# Update highest streak
 if [ "$total" -gt "$highest" ]; then
     highest=$total
 fi
 
-# ---- UPDATE READ ME VALUES ----
+# Update README.md values
 awk -v h="$highest" -v t="$total" -v d="$TODAY" '
 {
     if ($0 ~ /<b> Highest held streak:/) {
@@ -52,3 +52,8 @@ awk -v h="$highest" -v t="$total" -v d="$TODAY" '
     }
 }
 ' "$README" > tmp && mv tmp "$README"
+
+# Auto commit & push
+git add README.md
+git commit -m "Ceep Github STREAK this date $TODAY" >/dev/null 2>&1
+git push >/dev/null 2>&1
