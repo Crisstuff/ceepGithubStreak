@@ -1,59 +1,26 @@
 #!/bin/sh
 
 README="README.md"
-MESSAGE="This is a message, "
 TODAY=$(date +"%d.%m.%Y")
-YESTERDAY=$(date -v-1d +"%d.%m.%Y" 2>/dev/null || date -d "yesterday" +"%d.%m.%Y")
+NOW=$(date +"%H:%M:%S")
 
-# Extract fields from README
-highest=$(grep "<b> Highest held streak:" "$README" | sed 's/[^0-9]*//g')
-last_updated=$(grep "<b> Last updated:" "$README" | sed 's/.*: //g' | sed 's/<.*//')
-total=$(grep -o "This is a message, " "$README" | wc -l | tr -d ' ')
+# Unique message every run (prevents duplicates)
+MESSAGE="This is a message - $TODAY $NOW"
 
-# Daily reset check
-if [ "$last_updated" != "$TODAY" ] && [ "$last_updated" != "$YESTERDAY" ]; then
-    total=0
-    # Remove list of prints section entirely
-    awk '
-    /List of prints:/ {print; p=1; next}
-    p && /<\/br>/ {p=0; next}
-    !p' "$README" > tmp && mv tmp "$README"
+# Append message to README (always a change)
+echo "$MESSAGE" >> "$README"
+
+# Update / insert last updated line (extra safety)
+if grep -q "<b> Last updated:" "$README"; then
+    sed -i.bak "s|<b> Last updated:.*|<b> Last updated: $TODAY </b>|" "$README"
+else
+    echo "<b> Last updated: $TODAY </b>" >> "$README"
 fi
 
-# Add new message
-total=$((total + 1))
+# Remove backup file if sed created one (macOS)
+rm -f "$README.bak"
 
-# Insert message under "List of prints"
-awk -v msg="$MESSAGE" '
-{
-    print $0
-    if ($0 ~ /List of prints:/) {
-        print msg
-    }
-}
-' "$README" > tmp && mv tmp "$README"
-
-# Update highest streak
-if [ "$total" -gt "$highest" ]; then
-    highest=$total
-fi
-
-# Update README.md values
-awk -v h="$highest" -v t="$total" -v d="$TODAY" '
-{
-    if ($0 ~ /<b> Highest held streak:/) {
-        print "<b> Highest held streak: " h " days </b>"
-    } else if ($0 ~ /<b> Total count now:/) {
-        print "<b> Total count now: " t " </b>"
-    } else if ($0 ~ /<b> Last updated:/) {
-        print "<b> Last updated: " d " </b>"
-    } else {
-        print $0
-    }
-}
-' "$README" > tmp && mv tmp "$README"
-
-# Auto commit & push
+# Commit ONLY README
 git add README.md
-git commit -m "Ceep Github STREAK this date $TODAY" >/dev/null 2>&1
+git commit -m "Keep README streak alive: $TODAY $NOW" >/dev/null 2>&1
 git push >/dev/null 2>&1
