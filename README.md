@@ -69,11 +69,3 @@ This part of the README will be where the commits are happening. The list under 
 
 This is a message, 23.12.2025
 
-This is a message - 23.12.2025 15:16:12
-This is a message - 23.12.2025 15:16:40
-This is a message - 23.12.2025 15:22:49
-This is a message - 23.12.2025 15:22:52
-This is a message - 23.12.2025 15:22:53
-This is a message - 23.12.2025 15:22:54
-This is a message - 29.12.2025 18:03:01
-This is a message - 30.12.2025 16:35:05
