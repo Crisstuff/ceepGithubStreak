@@ -1,26 +1,27 @@
 #!/bin/sh
 
+# Find and set directory Path
+REPO_DIR="$(cd "$(dirname "$0")" && pwd)" # Finds the repo directory where THIS script lives
+cd "$REPO_DIR" || exit 1 # IMPORTANT: This is the file path to (move into the git repo)
+
 README="README.md"
-TODAY=$(date +"%d.%m.%Y")
-NOW=$(date +"%H:%M:%S")
+TODAY=$(/bin/date +"%d.%m.%Y")
+NOW=$(/bin/date +"%H:%M:%S")
 
-# Unique message every run (prevents duplicates)
-MESSAGE="This is a message - $TODAY $NOW"
+# Create message
+MESSAGE="This is a message - $TODAY $NOW" # Unique message every run (prevents duplicates)
+/bin/echo "$MESSAGE" >> "$README" # Append message to README (always a change)
 
-# Append message to README (always a change)
-echo "$MESSAGE" >> "$README"
-
-# Update / insert last updated line (extra safety)
-if grep -q "<b> Last updated:" "$README"; then
-    sed -i.bak "s|<b> Last updated:.*|<b> Last updated: $TODAY </b>|" "$README"
+# Update / insert last updated line
+if /usr/bin/grep -q "<b> Last updated:" "$README"; then
+    /usr/bin/sed -i.bak "s|<b> Last updated:.*|<b> Last updated: $TODAY </b>|" "$README"
 else
-    echo "<b> Last updated: $TODAY </b>" >> "$README"
+    /bin/echo "<b> Last updated: $TODAY </b>" >> "$README"
 fi
 
-# Remove backup file if sed created one (macOS)
-rm -f "$README.bak"
+/bin/rm -f "$README.bak" # Remove sed backup (macOS)
 
-# Commit ONLY README
-git add README.md
-git commit -m "Keep README streak alive: $TODAY $NOW" >/dev/null 2>&1
-git push >/dev/null 2>&1
+# Git commands — Commits ONLY README.md
+/usr/bin/git add README.md
+/usr/bin/git commit -m "Keep README streak alive: $TODAY $NOW" >/dev/null 2>&1
+/usr/bin/git push >/dev/null 2>&1
