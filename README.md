@@ -6,10 +6,17 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 - crontab -e
 - bash
 
+### scripts: 
+- Mac OS script = macscript.sh
+- Raspberry pi script = raspscript.sh
+- No version for windows 
+  
+`NOTE`: I have just tried this to run this on a raspberry pi 5 with linux mint installed dont know if it will need a different setup if there is another distro.    
+
 ### How it works
 - This project uses crontab to set a rimainder to run this script once every day
 - The `script.sh` file contains a bash script that opens the `README.md` file and types a massage to <b> Ceep Github streak </b> 🎉
-- The script also count's the Total count and + 1 for each time it runs 
+- The script also count's the Total count and + 1 for each time it runs
 
 </br>
 
@@ -18,11 +25,12 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
 - Add the last time the streak was updated in the `Last updated` to see the last date it was updated.
 - Show the `Total count now` of the streak by counting the massages under the `List of prints`. 
 - If the `Last updated` date isnt from the day erlyer the `List of prints` gets viped and the `Total count now` gets set back to 0.
-
+  
+- `NOTE`: This project is still under development so all the condisions may not be put into practice yet 
 
 # Version for Linux & Mac OS
 
-## How to sett this up in general linux/mac PC
+## How to sett this up on MAC
 1. Clone this repositorry
 2. Open the `README.md` scroll to the bottom of the file and change the information under `Times this ceepGithubStreak have run`
    
@@ -45,13 +53,11 @@ This is a program that im running on a [raspberry pi](https://www.raspberrypi.co
    
    Then klikk `esc` to get out of Insert mode, Then write `:wq` this means write quit and saves your changes.
 
-8. Now you`ll just have to have your machene run constantly and the script will run 00:00 every day 👍
+8. Now you`ll just have to have your machene run constantly and the script will run 12:00 every day 👍
 
 ## How to set this up on a raspberry pi 5
 - Work in progress 
 
-# Version for Window OS
-- Work in progress
 
 
 
@@ -66,6 +72,7 @@ This part of the README will be where the commits are happening. The list under 
 <b> Total count now: 1 </b>
 
 <b> List of prints: </b>
+
 This is a message - 04.01.2026 16:01:41
 This is a message - 04.01.2026 16:10:21
 This is a message - 04.01.2026 16:35:00
